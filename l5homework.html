@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Cheatsheet!!!</title>
+</head>
+<body>
+	<h1> Javascript Cheatsheet!!! </h1>
+	<script>
+
+	// Variables
+
+		// Variable examples (data can be numbers, strings, boolean or undefined):
+			var name = "Jen";
+			var numberOfCats = 3;
+			var isLogicPainful = true;
+
+
+
+	// Debugging
+
+		// There are several debugging methods (ie to test that a function is functioning) which are sending alerts, sending messages to the console and logging to the html)
+		
+			// Method 1 - Alert:
+			alert('Hello world!');
+
+			// Method 2 - Console:
+			console.log('Hellow world!');
+
+			// Method 3 - Logging to the html:
+			function swap(){
+			document.getElementById('tester').innerHTML = "This is the new text!";
+			}
+			// See line 67 for corresponding HTML!
+		
+
+
+	// Different data types
+
+		// To add two numbers together and print them to the console:
+			var x = 100;
+			var y = 200;
+			var z = x + y;
+			console.log(z);
+
+		// To add two strings together and print them as an alert:
+			var part1 = "This is the beginning";
+			var part2 = " and this is the end.";
+			var sentence = part1 + part2;
+			alert(sentence);
+
+
+
+	// Arrays
+
+		// To declare an array and print a particular string to the console using an index:
+			var cats = ["tabby", "manx", "calico", "siamese"];
+			console.log(cats[0]); 
+			// This will return the string "tabby"
+			console.log(cats[3]); 
+			// This will return the string "siamese"
+
+		// To declare a multidimensional array and print a particular string to the console:
+			var pets = [["tabby", "manx", "calico", "siamese"], ["lab", "pug", "beagle", "mutt"]];
+			console.log(pets[0][2]);
+			// This will return the string "calico"
+
+
+
+	// Testing
+
+		// To test if two strings are equal:
+			"kitties" === "puppies";
+			// This would return "false"
+			"kitties" === "kitties";
+			// This would return "true"
+
+		// BIG REMINDER - DON'T USE TWO EQUAL SIGNS TO TEST - WILL WREAK HAVOC!!!! 
+		// Because using three equals signs instead of two also checks the object type!!
+
+		// To test if two strings are NOT equal:
+			"kitties" !== "kittens";
+			// This would return "true"	
+
+		// To test if one number is greater than another:
+			34 < 11;
+			// This would return "false"
+
+		// Remember that <, >, <=, >= are also valid comparison operators
+
+		
+
+	// Logic
+
+		// if statement:
+		if("cat" === "kitty"){
+		console.log("You'll never see this in the console because cats is not equal to kitty");
+		}
+		if("cats" === "cats"){
+		console.log("But you'll definitely see this");
+		}
+
+		// else statement:
+
+		if(5>10){
+		console.log("You'll never see this because 5 is not greater than 10");
+		} else{
+		console.log("You will see this though, since 5 < 10 is false");
+		}
+
+		// else if statement:
+
+		if(5>10){
+		console.log("You'll never see this because 5 is not greater than 10");
+		} else if(5===5){
+		console.log("Yes, 5 really is equal to 5, so this will show up in the console")
+		} else{
+		console.log("We won't get here because our else if evaluates to true");
+		}
+
+
+
+	// Functions
+
+		function addNums(){
+		num1 = document.getElementById('num1').value;
+		num2 = document.getElementById('num2').value;
+		document.getElementById('result').innerHTML = (parseInt(num1) + parseInt(num2));
+		}
+
+	</script>
+
+	<!-- 	This html goes with testing Method 3, lines 21-25. -->
+	<div onclick="swap()" id="tester">Click to change this text!</div>
+
+
+	<!-- This html goes with Functions, Lines 122-126 -->
+	Number 1: <input type="text" id="num1">
+	Number 2: <input type="text" id="num2">
+	<button id="add" onclick="addNums()">Click to add</button>
+	<br>
+	Result:
+	<span id="result">Result Here</span>
+
+</body>
+
+</html>
