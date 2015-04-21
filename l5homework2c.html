@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions - Gestalt</title>
+</head>
+<body>
+	<h1>Is the whole greater than the sum of its parts?</h1>
+	
+	<script>
+	  function gestalt() {
+			var whole = document.getElementById("whole").value;
+			var sum = document.getElementById("sum").value;
+    	if (whole > sum) {
+        return alert("The whole is greater than the sum of its parts.");
+      } else {
+        return alert("Nahhh!");
+      }
+  	}
+	</script>
+	
+	<div>
+		How much is the whole?
+		<br>
+		<input type="text" id="whole">
+		<br>
+		How much is the sum? 
+		<br>
+		<input type="text" id="sum">
+		<br>
+		<button id="" onclick="gestalt()">Calculate!</button>
+	</div>
+
+</body>
+</html>

@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Functions!</title>
+	<title>Functions - Cat Lady!</title>
 </head>
 <body>
-	<h1> Functions!</h1>
-	
+	<h1>Are you a cat lady?</h1>
 	<script>
-
-		function catlady(number) {
-			var numberOfCats = document.getElementById("numberOfCats");
+		// Cat lady check!
+		function catlady() {
+			var numberOfCats = document.getElementById("numberOfCats").value;
 			if (numberOfCats >= 4) {
-			return alert("You are a cat lady!");
-			}
-		else if (numberOfCats < 4) {
-			return alert("You are NOT a cat lady!");
+				return alert("You are a cat lady!");
+			} else if (numberOfCats < 4) {
+				return alert("You are NOT a cat lady!");
 			}
 		}
+  </script>
 
-    </script>
-
-	How many cats do you have? <input type="text" id="numberOfCats">
-	<button id="test" onclick="catlady()">Test your catlady-ness!</button>
+	<div>
+		How many cats do you have? 
+		<input type="text" id="numberOfCats">
+		<button id="test" onclick="catlady()">Test your catlady-ness!</button>
+	</div>
 
 </body>
-
 </html>
