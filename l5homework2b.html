@@ -10,16 +10,16 @@
 		function dogyears() {
 			var age = document.getElementById("age").value;
 			var dogquotient = 7;
-			return alert("You are " + parseInt(age) + parseInt(dogquotient) + " in dog years!");
+			return alert("You are " + (parseInt(age) * parseInt(dogquotient)) + " in dog years!");
 			}
   </script>
 
 	<div>
-		How old are you in dog years? 
+		How old are you? 
 		<br>
 		<input type="text" id="age">
 		<button id="" onclick="dogyears()">Calculate!</button>
 	</div>
-	
+
 </body>
 </html>
